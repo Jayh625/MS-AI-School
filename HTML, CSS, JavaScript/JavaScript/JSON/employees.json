@@ -1,0 +1,31 @@
+employees_json = [
+    {
+        "emp_number" : "998001",
+        "name" : "이진아",
+        "gender" : "Female",
+        "hire_date" : "2009-09-01",
+        "positions" : [
+            {
+                "position" : "General Manager",
+                "from" : "2022-01-01",
+                "to" : null
+            },
+            {
+                "position" : "Staff",
+                "from" : "2009-01-01",
+                "to" : "2010-03-01"
+            }
+        ]
+    },
+    {
+        "emp_number" : "200001",
+        "name" : "김창수",
+        "gender" : "Male",
+        "hire_date" : "2019-08-04",
+        "positions" : {
+            "position" : "Staff",
+            "from" : "2019-08-04",
+            "to" : null
+        }
+    }
+]

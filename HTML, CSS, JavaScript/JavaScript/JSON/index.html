@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>간단한 JSON 예제</h1>
+    <div id="message"></div>
+    <script>
+        window.onload = () => {
+            // let message = {
+            //     "contents" : "JSON은 서버에서 웹페이지로 데이터를 보낼 떄 자주 사용됩니다.."
+            // };
+            // let div_elem = document.getElementById('message');
+            // div_elem.innerText = message.contents;
+
+            const student = {
+                "name" : "김창수",
+                "score" : [85,90,93]
+            };
+            // 메모리에 저장된 element를 가져오기
+            let div_elem = document.getElementById('message');
+            div_elem.innerText = student.name + "의 점수 : " + student.score[0] + "," + student.score[1] + "," + student.score[2];
+        }; 
+    </script> -->
+
+    <script type="text/javascript" src="employees.json"></script>
+    <script>
+        for(var idx in employees_json) {
+            let data = employees_json[idx];
+
+            if(data.positions instanceof Array) {
+                let current_position = null;
+                for(var j in data.positions) {
+                    if(data.positions[j].to === null)
+                        current_position = data.positions[j].position;
+                }
+                document.write("emp_number : " + data.emp_number + ", name : " + data.name + ", position : " + current_position + "<br>");
+            }
+            else {
+                document.write("emp_number : " + data.emp_number + ", name : " + data.name + ", position : " + data.positions.position + "<br>");
+            }
+        }
+    </script>
+</body>
+</html>

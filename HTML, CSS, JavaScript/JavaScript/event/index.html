@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p ondblclick="showResponse()">안녕하세요.</p>
+    <input type="button" value="확인" onclick="showMessage()">
+    <script>
+        function showResponse() { console.log("네 만나서 반갑습니다."); }
+        function showMessage() { console.log("그동안 잘지내셨죠?"); }
+    </script> -->
+    <!-- <p id="greetings">안녕하세요.</p>
+    <input type="button" value="확인" id="message">
+    <script>
+        let pElem = document.getElementById('greetings');
+        let inputElem = document.getElementById('message');
+
+        pElem.addEventListener("dblclick", ()=> { console.log("네 만나서 반갑습니다.");}, false)
+        inputElem.addEventListener("dblclick", ()=> { console.log("그동안 잘지내셨죠?");}, false)
+    </script> -->
+
+    <p id="greetings">안녕하세요.</p>
+    <input type="button" value="확인" id="message">
+    <input type="button" value="이벤트리스너 연결 해제" id="removeListener">
+    <script>
+        function greetings() { console.log("네, 만나서 반갑습니다."); }
+        function message() { console.log("그동안 잘 지내셨죠?"); }
+        function releaseListener(){
+            pElem.removeEventListener("dbclick", greetings, false);
+            inputElem.removeEventListener("click", message, false);
+        }
+
+        let pElem = document.getElementById('greetings');
+        let inputElem = document.getElementById('message');
+        let removeListener = document.getElementById('removeListener');
+
+        pElem.addEventListener("dblclick", greetings, false);
+        inputElem.addEventListener("dblclick", message, false);
+        removeListener.addEventListener("dblclick", releaseListener, false);
+    </script>
+</body>
+</html>

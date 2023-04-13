@@ -1,0 +1,256 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            min-width: 200px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+        }
+        table th { padding: 5px 0; background-color: teal; color: #ffffff;}
+        table tr td:last-child {text-align: right;}
+    </style>
+</head>
+<body>
+    <!-- <script>
+        let fruits = ['사과', '포도', '딸기'];
+        for(var idx=0; idx<fruits.length; idx++)
+            document.write("fruits[" + idx + "] : "+ fruits[idx] + "<br>");
+    </script> -->
+
+    <!-- <script>
+        let fruits = ['사과','포도','딸기'];
+
+        function ShowItem(item, index){
+            document.write("fruits["+ index + "] : " + item + "<br>");
+        }
+
+        fruits.forEach(ShowItem);
+    </script> -->
+
+    <!-- <script>
+        let cities1 = ['서울','부산','인천'];
+        let cities2 = ['광주','대전','전주'];
+        let concat_cities = cities1.concat(cities2);
+        let br = "<br>"
+        document.write(cities1+br)
+        document.write(cities2+br)
+        document.write(concat_cities+br);
+    </script> -->
+
+    <!-- <script>
+        let cities1 = ['서울','부산','인천'];
+        let cities2 = ['광주','대전','전주'];
+        document.write(cities1.join() + "<br>");
+        document.write(cities2.join('|'));
+    </script> -->
+    
+    <!-- <script>
+        function show_item(array) {
+            if(Array.isArray(array)) {
+                for(var idx=0; idx<array.length; idx++){
+                    document.write("Array["+idx+"] : " + array[idx] + "<br>");
+                }
+                document.write(`아이템 수 : ${array.length} <br>`);
+            }
+        }
+        let cities = ['서울','부산','인천'];
+        let extra_cities = ['광주','대전'];
+
+        show_item(cities);
+        cities.push('전주','춘천');
+        show_item(cities);
+
+        let returnValue = cities.pop();
+        document.write(returnValue + "<br>");
+        show_item(cities);
+    </script> -->
+
+    <!-- <script>
+        let cities = ['서울','부산','인천','대전','광주','대구','전주','춘천'];
+        let partial_cities1 = cities.slice(0,2);
+        document.write("Partial cities1 : " + partial_cities1 + "<br>");
+        let partial_cities2 = cities.slice(2);
+        document.write("Partial cities2 : " + partial_cities2 + "<br>");
+        let partial_cities3 = cities.slice(2,6);
+        document.write("Partial cities3 : " + partial_cities3 + "<br>");
+        let partial_cities4 = cities.slice(-4);
+        document.write("Partial cities4 : " + partial_cities4 + "<br>");
+    </script> -->
+
+    <!-- <script>
+        function filteredItems_by_price(in_items, in_price) {
+            let filteredItems = in_items.filter(function(item){
+                return item.price <= in_price
+            });
+            return filteredItems;
+        }
+        let items = [
+            {name: 'MSI 프레스티지 15 A12UC',price:1490000},
+            {name:'ASUS 비보북 17 X1702ZA-AU105',price:768000},
+            {name:'삼성전자 갤럭시북2 프로 NT950XEE-X71AR',price:2351000},
+            {name:'레노버 게이밍 3i 15IAH I5 3050Ti Edition',price:899000},
+            {name:'APPLE 2021 맥북프로16 MK183KH/A M1 Pro',price:2815000},
+            {name:'Dell 인스피론 16 5620-UB05KR',price:1290000},
+        ];
+
+        let filteredItems = items.filter( function(item){
+            return item.price <= 1300000
+        });
+        filteredItems.forEach(filteredItem => {
+            for(let key in filteredItem) {
+                document.write(`${key} : ${filteredItem[key]} <br>`);
+            }
+        });
+
+        let filteredItems2 = filteredItems_by_price(items, 2400000);
+    </script> -->
+
+    <!-- <script>
+        let numbers = [4,9,16,25];
+        let using_Math_sqrt = numbers.map(Math.sqrt);
+        document.write(using_Math_sqrt);
+    </script> -->
+
+    <!-- <script>
+        let items = [
+            {name: 'MSI 프레스티지 15 A12UC',price:1490000},
+            {name:'ASUS 비보북 17 X1702ZA-AU105',price:768000},
+            {name:'삼성전자 갤럭시북2 프로 NT950XEE-X71AR',price:2351000},
+            {name:'레노버 게이밍 3i 15IAH I5 3050Ti Edition',price:899000},
+            {name:'APPLE 2021 맥북프로16 MK183KH/A M1 Pro',price:2815000},
+            {name:'Dell 인스피론 16 5620-UB05KR',price:1290000},
+            {name: 'MSI 프레스티지 15 A12UC',price:1450000},
+        ];
+
+        let foundItem = items.find((item) => { return item.name === 'MSI 프레스티지 15 A12UC'});
+        let notfoundItem = items.find((item) => { return item.name === 'MSI'});
+        let foundItem_index = items.findIndex((item) => {
+            return item.name === 'MSI 프레스티지 15 A12UC'
+        });
+        let notfoundItem_index = items.findIndex((item) => {
+            return item.name === 'MSI 프레스티지'
+        });
+        let foundLastItem = items.findLast((item) => {
+            return item.name === 'MSI 프레스티지 15 A12UC'
+        });
+        let foundItem_lastindex = items.findLastIndex((item) => {
+            return item.name === 'MSI 프레스티지 15 A12UC'
+        });
+        
+        document.write(foundItem['name']+"<br>");
+        document.write(notfoundItem+"<br>");
+        document.write(foundItem_index+"<br>");
+        document.write(notfoundItem_index+"<br>");
+        document.write(`${foundItem_lastindex} : ${foundLastItem['name']}`);
+    </script> -->
+
+    <!-- <script>
+        const ages = [29,56,16,41,65];
+        function checkAge(age) { return age>20; }
+        document.write(ages.some(checkAge) + "<br>");
+        document.write(ages.every(checkAge) + "<br>");
+        document.write(ages.includes(29) + "<br>");
+        document.write(ages.includes(29,1) + "<br>");
+    </script> -->
+    
+    <!-- <script>
+        let bucket_list = [ "세계 3대 폭포 구경하기", "부다페스트 세체니 다리 위에서 노을을 바라보며 멍때리기", "10권 책쓰기","낯선 곳에서 3년 이상 살아보기"];
+        function show_bucket_list(in_bucketlist) {
+            for(var idx=0; idx<in_bucketlist.length; idx++) {
+                document.write(`${idx} : ${in_bucketlist[idx]} <br>`);
+            }
+        }
+        document.write(" ## 기존 아이템 1개 삭제" + "<br>");
+        let remove_items = bucket_list.splice(2,1);
+        document.write(remove_items + "<br>");
+        show_bucket_list(bucket_list);
+
+        document.write(" ## 새로운 아이템 추가 " + "<br>");
+        bucket_list.splice(0,0,"하루에 1시간 이상 산책하기", "남아메리카 여행하기");
+        show_bucket_list(bucket_list);
+
+        document.write(" ## 기존 아이템 수정 " + "<br>");
+        bucket_list.splice(1,1, "탄자니아 킬리만자로 트래킹하기")
+        show_bucket_list(bucket_list);
+    </script> -->
+
+    <!-- <script>
+        function reducer(acc,cur_val){
+            document.write("acc : " + acc + ", current value : " + cur_val + "<br>");
+            return acc+cur_val;
+        };
+
+        // const reducer = (acc,cur_val) => {
+        //     document.write("acc : " + acc + ", current value : " + cur_val + "<br>");
+        //     return acc+cur_val;
+        // }
+        const initialValue = 1;
+        const numbers = [1,3,6];
+
+        const sum1 = numbers.reduce(reducer,initialValue);
+        document.write(`sum1 : ${sum1} <br>`);
+        
+        const sum2 = numbers.reduce(reducer);
+        document.write(`sum2 : ${sum2} <br>`);
+    </script> -->
+
+    <!-- <script>
+        let price_of_products = [1490000, 768000, 2351000, 899000, 2815000];
+
+        let discounted_price_of_products = price_of_products.reduce( (acc,cur_val) => {
+            acc.push(cur_val = cur_val - (cur_val * 0.1));
+            return acc;
+        }, []);
+        document.write(discounted_price_of_products);
+    </script> -->
+
+    <!-- <script>
+        const populations_cities = [
+            ["서울시", 9509458],
+            ["부산시", 9509458],
+            ["인천시", 2948375],
+            ["대전시", 1452251],
+        ]
+        function displayItems(inArray) {
+            for(var ridx=0; ridx<inArray.length; ridx++){
+                for(var cidx=0; cidx<inArray[0].length; cidx++){
+                    document.write(inArray[ridx][cidx]+"\t");
+                }
+                document.write("<br>");
+            }
+        };
+
+        displayItems(populations_cities);
+    </script> -->
+
+    <script>
+        const populations_cities = [
+            ["서울시", 9509458],
+            ["부산시", 9509458],
+            ["인천시", 2948375],
+            ["대전시", 1452251],
+        ]
+        const displayItems = (inArray) => {
+            document.write("<table border>");
+            document.write("<tr>");
+            document.write("<th>도시</th>");
+            document.write("<th>인구</th>");
+            document.write("</tr>");
+            for(var ridx=0; ridx<inArray.length; ridx++){
+                document.write("<tr>")
+                for(var cidx=0; cidx<inArray[0].length; cidx++){
+                    document.write("<td>" + inArray[ridx][cidx]+"</td>");
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        };
+        displayItems(populations_cities);
+    </script>
+</body>
+</html>

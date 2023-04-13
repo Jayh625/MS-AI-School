@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        const message = () => { alert("만나서 반갑습니다.")};
+        message();
+    </script> -->
+    <!-- <script>
+        const message = (name) => {
+            let curr_date = new Date();
+            document.write(name + "님 안녕하세요." + "<br>");
+            if(name === "강지은") {
+                document.write(name + "님 안녕하세요." + curr_date + "<br>");
+            }
+            else {
+                document.write(name + "님 하이요" + "<br>");
+            }
+        }
+        message("김창수")
+        message("이아름")
+        message("강지은")
+    </script> -->
+    <!-- <script>
+        const curr_date = () => {
+            let curr_date = new Date().toISOString();
+            // let curr_date = new Date().toISOString().slice(0,10);
+            return curr_date
+        }
+        let retureDate = curr_date();
+        document.write("Current Date : " + retureDate);
+    </script> -->
+    <!-- <script>
+        const deposit = (name, amount) => {
+            let message = name + " 고객님, " + amount + "원이 입금되었습니다.";
+            return message;
+        }
+        document.write(deposit('김창수', 300000));
+    </script> -->
+
+    <!-- <script>
+        const message = (name) => {
+            return "안녕하세요. " + name + "님" + "<br>";
+        }
+
+        const curr_Date = (name) => {
+            let sayHello = message(name);
+            let curr_date = new Date().toISOString().slice(0,10);
+            document.write(sayHello + " 오늘의 날씨는 ") + curr_date + "입니다. <br>";
+        }
+
+        curr_Date("김창수");
+        curr_Date("이아름");
+    </script> -->
+
+    <script>
+        function longestName(){
+            let longest_name = "";
+            for(let i=0; i<arguments.length; i++){
+                if(arguments[i].length > longest_name.length){
+                    longest_name = arguments[i];
+                }
+            }
+            return longest_name;
+        }
+
+        document.write("입력된 데이터 중 가장 긴 이름 : " + 
+            longestName("대전", "태백시", "오스트리아", "대한민국","서울"));
+    </script>
+</body>
+</html>

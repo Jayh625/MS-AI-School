@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container { width: 90%; margin: 0 auto; padding: 5px; background: azure; text-align: center; }
+        img { border: 2px solid #0288d1; width: 33.3%; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../images/praha.jpg">
+    </div>
+    <script>
+        document.addEventListener('keydown', (event) => {
+            const keyName = event.key;
+            if(keyName == 'Control') return;
+            if(keyName == 'Alt') return;
+            if(keyName == 'Shift') return;
+
+            if(event.ctrlKey && (event.keyCode == 86)) {
+                console.log('austria.jpg가 추가됩니다!');
+                add_Image();
+            }
+            else if(event.ctrlKey) { console.log(`Ctrl + ${keyName} 키(Key)가 눌렸습니다.`); }
+            else if(event.altKey) { console.log(`Alt + ${keyName} 키(Key)가 눌렸습니다.`); }
+            else if(event.shiftKey) { console.log(`Shift + ${keyName} 키(Key)가 눌렸습니다.`); }
+            else { console.log(`${keyName} 키(Key)가 눌렸습니다.`);}
+        }, false);
+
+        document.addEventListener('keyup', (event) => {
+            const keyName = event.key;
+            console.log(`${keyName} 키(Key)가 해제되었습니다.`);
+        }, false);
+
+        function add_Image(){
+            let img = document.createElement('img');
+            img.src = '../images/austria.jpg';
+            let parent_node = document.querySelector('.container');
+            parent_node.appendChild(img);
+        }
+    </script>
+</body>
+</html>

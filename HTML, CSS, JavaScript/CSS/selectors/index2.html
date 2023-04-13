@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        :root { background-color: teal;}
+        table { border-collapse: collapse; color: white; } /* width: 600px;*/
+        table, th, td { border: 1px solid white; padding: .5rem;}
+        th { font-size: 1.2rem;}
+        tr:nth-last-child(1) {font-size: 1.2rem; font-weight: bolder;}
+        tr:first-child {background-color: green;}
+        tr:last-child {background-color: green;}
+    </style> -->
+    
+    <style>
+        div { padding: 1rem;}
+        .world .capital {color: teal;}
+        .world > .country {color: pink;}
+        .country:nth-of-type(1) + div {color: blue;} /*인접 형제 Adjacent Sibling cominator*/
+    </style>
+</head>
+<body>
+    <!-- <table>
+        <tr>
+            <th>item</th>
+            <th>quantity</th>
+            <th>price</th>
+        </tr>
+        <tr>
+            <td>Laptop</td>
+            <td>1</td>
+            <td>450</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>1</td>
+            <td>250</td>
+        </tr>
+        <tr>
+            <td>Banana</td>
+            <td>3</td>
+            <td>1.2</td>
+        </tr>
+        <tr>
+            <td>Car</td>
+            <td>1</td>
+            <td>8000</td>
+        </tr>
+        <tr>
+            <td>Book</td>
+            <td>3</td>
+            <td>65</td>
+        </tr>
+    </table> -->
+    <div class="world">
+        World
+        <div class="country">
+            South Korea
+            <div class="capital">Seoul</div>
+        </div>
+        <div class="country">
+            England
+            <div class="capital">London</div>
+        </div>
+        <div class="country">
+            France
+            <div class="capital">Paris</div>
+        </div>
+    </div>
+</body>
+</html>
