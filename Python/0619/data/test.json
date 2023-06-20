@@ -1,0 +1,38 @@
+[
+    {
+        "filename": "image_001.jpg",
+        "width": 1280,
+        "height": 720,
+        "ann": {
+            "bboxes": [[10, 10, 50, 50], [100, 100, 200, 200]],
+            "labels": [0, 1]
+        }
+    },
+    {
+        "filename": "image_002.jpg",
+        "width": 720,
+        "height": 1280,
+        "ann": {
+            "bboxes": [[20, 20, 60, 60], [300, 300, 400, 400]],
+            "labels": [1, 2]
+        }
+    },
+       {
+        "filename": "image_003.jpg",
+        "width": 720,
+        "height": 1280,
+        "ann": {
+            "bboxes": [[30, 30, 60, 60], [300, 300, 400, 400]],
+            "labels": [1, 2]
+        }
+    },
+       {
+        "filename": "image_004.jpg",
+        "width": 720,
+        "height": 1280,
+        "ann": {
+            "bboxes": [[10,10, 60, 60], [300, 300, 400, 400]],
+            "labels": [1, 2]
+        }
+    }
+]
