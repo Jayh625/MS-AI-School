@@ -3,9 +3,9 @@ pdf/
 커리어서비스/
 Linux-on-Azure/
 Certificate/
-Statistics/
+Python-pdf/
 Python/0613/chromedriver.exe
 Python/0619/sample_data_01
-Python/0620/final_data
-Python/0620/image_extraction_data
-Python/0620/raw_data
+Python/Assignment/GTZAN_data/raw_data
+Python/Assignment/GTZAN_data/image_extraction_data
+Python/Assignment/GTZAN_data/final_data
