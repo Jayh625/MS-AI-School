@@ -3,10 +3,10 @@ import librosa
 import librosa.display
 import os 
 import glob
-import random
 import numpy as np
 import IPython
 from PIL import Image
+from tqdm import tqdm
 
 class Sound_Augmentation:
     def __init__(self, input_path):
@@ -15,19 +15,8 @@ class Sound_Augmentation:
     def sound_augmentation(self, input_path):
         # Read files' directory and name
         dir, file = os.path.split(input_path)
-        folder_name = dir.rsplit('/')[2]
+        folder_name = dir.rsplit('/')[3]
         name = os.path.basename(input_path).rsplit('.wav')[0]
-        
-        # make image_extraction_data folder
-        os.makedirs("./image_extraction_data", exist_ok=True)
-        os.makedirs("./image_extraction_data/MelSepctrogram", exist_ok=True)
-        os.makedirs("./image_extraction_data/STFT", exist_ok=True)
-        os.makedirs("./image_extraction_data/waveshow", exist_ok=True)
-        for (path, dir, files) in os.walk('./raw_data/'):
-            for d in dir :
-                os.makedirs(f"./image_extraction_data/MelSepctrogram/{d}", exist_ok=True)
-                os.makedirs(f"./image_extraction_data/STFT/{d}", exist_ok=True)
-                os.makedirs(f"./image_extraction_data/waveshow/{d}", exist_ok=True)
         
         # MelSepctrogram
         data, sr = librosa.load(input_path, sr=22050)
@@ -48,9 +37,8 @@ class Sound_Augmentation:
         plt.figure(figsize=(12,4))
         librosa.display.specshow(mel_spec_db_temp, sr=sr, x_axis='time', y_axis='hz')
         plt.axis('off')
-        plt.savefig(f"./image_extraction_data/MelSepctrogram/{folder_name}/{name}_mel_spec_0-10.png", bbox_inches='tight', pad_inches=0)
+        plt.savefig(f"./GTZAN_data/image_extraction_data/MelSepctrogram/{folder_name}/{name}_mel_spec_0-10.png", bbox_inches='tight', pad_inches=0)
         plt.close()
-        print(f"{file} / MelSepctrogram - 0 to 10 secs conversion completed!")
 
         # noise
         stft = librosa.stft(data_selection_stft)
@@ -62,9 +50,8 @@ class Sound_Augmentation:
         plt.figure(figsize=(12,4))
         librosa.display.specshow(augmented_spec_db, sr=sr, x_axis='time', y_axis='hz')
         plt.axis('off')
-        plt.savefig(f"./image_extraction_data/MelSepctrogram/{folder_name}/{name}_mel_spec_0-10_aug_noise.png", bbox_inches='tight', pad_inches=0)
+        plt.savefig(f"./GTZAN_data/image_extraction_data/MelSepctrogram/{folder_name}/{name}_mel_spec_0-10_aug_noise.png", bbox_inches='tight', pad_inches=0)
         plt.close()
-        print(f"{file} / MelSepctrogram - Noise Augmentation completed!")
         
         # stretch
         rate = np.random.uniform(low=0.8, high=1.2)
@@ -75,9 +62,8 @@ class Sound_Augmentation:
         plt.figure(figsize=(12,4))
         librosa.display.specshow(stretched_stft_db, sr=sr, x_axis='time', y_axis='hz')
         plt.axis('off')
-        plt.savefig(f"./image_extraction_data/MelSepctrogram/{folder_name}/{name}_mel_spec_0-10_aug_stretch.png", bbox_inches='tight', pad_inches=0)
+        plt.savefig(f"./GTZAN_data/image_extraction_data/MelSepctrogram/{folder_name}/{name}_mel_spec_0-10_aug_stretch.png", bbox_inches='tight', pad_inches=0)
         plt.close()
-        print(f"{file} / MelSepctrogram - Stretch Augmentation completed!")
         
         # STFT
         data, sr = librosa.load(input_path, sr=22050)
@@ -95,9 +81,8 @@ class Sound_Augmentation:
         plt.figure(figsize=(12,4))
         librosa.display.specshow(stft_db_temp, sr=sr, x_axis='time', y_axis='hz')
         plt.axis('off')
-        plt.savefig(f"./image_extraction_data/STFT/{folder_name}/{name}_STFT_0-10.png", bbox_inches='tight', pad_inches=0)
+        plt.savefig(f"./GTZAN_data/image_extraction_data/STFT/{folder_name}/{name}_STFT_0-10.png", bbox_inches='tight', pad_inches=0)
         plt.close()
-        print(f"{file} / STFT - 0 to 10 secs conversion completed!")
 
         # noise
         noise = 0.005 * np.random.randn(*data_selection_stft.shape)
@@ -107,9 +92,8 @@ class Sound_Augmentation:
         plt.figure(figsize=(12,4))
         librosa.display.specshow(augmented_stft_db, sr=sr, x_axis='time', y_axis='hz')
         plt.axis('off')
-        plt.savefig(f"./image_extraction_data/STFT/{folder_name}/{name}_STFT_0-10_aug_noise.png", bbox_inches='tight', pad_inches=0)
+        plt.savefig(f"./GTZAN_data/image_extraction_data/STFT/{folder_name}/{name}_STFT_0-10_aug_noise.png", bbox_inches='tight', pad_inches=0)
         plt.close()
-        print(f"{file} / STFT - Noise Augmentation completed!")
         
         # stretch
         rate = 0.8 + np.random.random() * 0.4
@@ -119,9 +103,8 @@ class Sound_Augmentation:
         plt.figure(figsize=(12,4))
         librosa.display.specshow(stretched_stft_db, sr=sr, x_axis='time', y_axis='hz')
         plt.axis('off')
-        plt.savefig(f"./image_extraction_data/STFT/{folder_name}/{name}_STFT_0-10_aug_stretch.png", bbox_inches='tight', pad_inches=0)
+        plt.savefig(f"./GTZAN_data/image_extraction_data/STFT/{folder_name}/{name}_STFT_0-10_aug_stretch.png", bbox_inches='tight', pad_inches=0)
         plt.close()
-        print(f"{file} / STFT - Stretch Augmentation completed!")
         
         # Waveshow
         data, sr = librosa.load(input_path, sr=22050)    
@@ -135,9 +118,8 @@ class Sound_Augmentation:
         plt.figure(figsize=(12,4))
         librosa.display.waveshow(data_section, color='purple')
         plt.axis('off')
-        plt.savefig(f"./image_extraction_data/waveshow/{folder_name}/{name}_waveshow_0-10.png", bbox_inches='tight', pad_inches=0)
+        plt.savefig(f"./GTZAN_data/image_extraction_data/waveshow/{folder_name}/{name}_waveshow_0-10.png", bbox_inches='tight', pad_inches=0)
         plt.close()
-        print(f"{file} / Waveshow - 0 to 10 secs conversion completed!")
 
         # noise
         # 노이즈 추가
@@ -146,18 +128,16 @@ class Sound_Augmentation:
         plt.figure(figsize=(12,4))
         librosa.display.waveshow(data_noise, color='purple')
         plt.axis('off')
-        plt.savefig(f"./image_extraction_data/waveshow/{folder_name}/{name}_waveshow_0-10_aug_noise.png", bbox_inches='tight', pad_inches=0)
+        plt.savefig(f"./GTZAN_data/image_extraction_data/waveshow/{folder_name}/{name}_waveshow_0-10_aug_noise.png", bbox_inches='tight', pad_inches=0)
         plt.close()
-        print(f"{file} / Waveshow - Noise Augmentation completed!")
 
         # stretch
         data_stretch = librosa.effects.time_stretch(data_section, rate=0.8)
         plt.figure(figsize=(12,4))
         librosa.display.waveshow(data_stretch, color='purple')
         plt.axis('off')
-        plt.savefig(f"./image_extraction_data/waveshow/{folder_name}/{name}_waveshow_0-10_aug_stretch.png", bbox_inches='tight', pad_inches=0)
+        plt.savefig(f"./GTZAN_data/image_extraction_data/waveshow/{folder_name}/{name}_waveshow_0-10_aug_stretch.png", bbox_inches='tight', pad_inches=0)
         plt.close()
-        print(f"{file} / Waveshow - Stretch Augmentation completed!")
 
     def expend2square(self, pil_image, background_color):
         width, height = pil_image.size
@@ -184,31 +164,36 @@ class Sound_Augmentation:
                 file_list.append(os.path.join(path, f))
         return file_list
     
+    def make_dirs(self, input_path):
+        raw_data_path_list = []
+        for (path, dir, files) in os.walk(input_path):
+            for d in dir :
+                raw_data_path_list.append(d)
+        extraction_dir = './GTZAN_data/image_extraction_data'
+        final_dir = './GTZAN_data/final_data'
+        for dir_type in ['MelSepctrogram', 'STFT', 'waveshow']:
+            for folder_name in raw_data_path_list:
+                os.makedirs(f"{extraction_dir}/{dir_type}/{folder_name}", exist_ok=True)
+                os.makedirs(f"{final_dir}/{dir_type}/{folder_name}", exist_ok=True)
+
 if __name__ == "__main__":
-    input_path = "./raw_data/"
-    sg = Sound_Augmentation(input_path)
-    file_list =  sg.get_files_paths(input_path)
-    for item in file_list:
-        sg.sound_augmentation(item)
-
-    os.makedirs("./final_data", exist_ok=True)
-    os.makedirs("./final_data/MelSepctrogram", exist_ok=True)
-    os.makedirs("./final_data/STFT", exist_ok=True)
-    os.makedirs("./final_data/waveshow", exist_ok=True)
-    for (path, dir, files) in os.walk(input_path):
-        for d in dir :
-            os.makedirs(f"./final_data/MelSepctrogram/{d}", exist_ok=True)
-            os.makedirs(f"./final_data/STFT/{d}", exist_ok=True)
-            os.makedirs(f"./final_data/waveshow/{d}", exist_ok=True)
-    img_path_list = glob.glob(os.path.join('./image_extraction_data/', "*", "*", "*.png"))
-
-    for img_path in img_path_list:
+    raw_data_path = './GTZAN_data/raw_data/'
+    sg = Sound_Augmentation(raw_data_path)
+    sg.make_dirs(raw_data_path)
+    file_list =  sg.get_files_paths(raw_data_path)
+    for file in tqdm(file_list):
+        try:
+            sg.sound_augmentation(file)
+        except Exception as ex:
+            print(f"Error occurs on : {file} with the reason of {ex}")
+            
+    img_path_list = glob.glob(os.path.join('./GTZAN_data/image_extraction_data/', "*", "*", "*.png"))
+    for img_path in tqdm(img_path_list):
         dir, file = os.path.split(img_path)
         dir1 = dir.rsplit('\\')[1]
         dir2 = dir.rsplit('\\')[2]
         name = os.path.basename(img_path).rsplit('.png')[0]
         img = Image.open(img_path)
         img_new = sg.resize_with_padding(img, (255,255), (0,0,0)) 
-        save_file_name = f"./final_data/{dir1}/{dir2}/{name}.png"
+        save_file_name = f"./GTZAN_data/final_data/{dir1}/{dir2}/{name}.png"
         img_new.save(save_file_name, "png")
-        print(f"./final_data/{dir1}/{dir2}/{name}.png saved!")
