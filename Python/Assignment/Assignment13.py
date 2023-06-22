@@ -1,3 +1,4 @@
+
 import numpy as np
 import matplotlib.pyplot as plt
 import os
@@ -9,6 +10,7 @@ from tqdm import tqdm
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
 
 import time
 import os
@@ -28,7 +30,7 @@ class CrawlingandResizing :
         driver.get("https://www.google.co.kr/imghp?h1=ko")
         os.makedirs('./imgs/original', exist_ok=True)
         current_path = os.getcwd()
-        current_path += '\\imgs\\original\\'
+        current_path += '\\data\\imgs\\original\\'
         for search_word in search_words:
             elem = driver.find_element(By.NAME, value="q")
             elem.clear()
@@ -105,6 +107,7 @@ class CrawlingandResizing :
         img_saturated = cv2.cvtColor(img_hsv, cv2.COLOR_HSV2BGR)
         img_saturated = cv2.cvtColor(img_saturated, cv2.COLOR_BGR2RGB)
         return [image, rotated, flipped_right_and_left, flipped_up_and_down, img_saturated]
+    
     def get_files_paths(self, input_path):
             file_list = []
             for (path, dir, files) in os.walk(input_path):
@@ -117,8 +120,8 @@ class CrawlingandResizing :
             for d in dir:
                 dir_list.append(d)
         for dir in dir_list:
-            os.makedirs(f"./imgs/resized/{dir}", exist_ok=True)
-            os.makedirs(f"./imgs/augmented/{dir}", exist_ok=True)
+            os.makedirs(f"./data/imgs/resized/{dir}", exist_ok=True)
+            os.makedirs(f"./data/imgs/augmented/{dir}", exist_ok=True)
             
 class CatchThief :
     def __init__(self) :
@@ -184,7 +187,7 @@ if __name__ == "__main__" :
     cr.google_crawling(input_list, counts)
 
     # Original to Resized (255,255) 
-    input_path = './imgs/original/'
+    input_path = './data/imgs/original/'
     cr.make_dirs(input_path)
     img_path_list = glob.glob(os.path.join(input_path, "*", "*.jpg"))
     for img_path in tqdm(img_path_list):
@@ -193,11 +196,11 @@ if __name__ == "__main__" :
         name = os.path.basename(img_path).rsplit('.png')[0]
         img = Image.open(img_path)
         img_new = cr.resize_with_padding(img, (255,255), (0,0,0)) 
-        save_file_name = f"./imgs/resized/{folder_name}/resized_{name}.png"
+        save_file_name = f"./data/imgs/resized/{folder_name}/resized_{name}.png"
         img_new.save(save_file_name, "png")
 
     # Resized to Augmented
-    resized_img_path = './imgs/resized/'
+    resized_img_path = './data/imgs/resized/'
     resized_img_path_list = glob.glob(os.path.join(resized_img_path, "*", "*.png"))
     for img_path in tqdm(resized_img_path_list):
         dir, file = os.path.split(img_path)
@@ -206,7 +209,7 @@ if __name__ == "__main__" :
         img = cv2.imread(img_path)
         for i, aug_img in enumerate(cr.img_aug(img)) :
             aug_img_name = f"augmented{i}_{name}.png"
-            save_file = f"./imgs/augmented/{folder_name}/{aug_img_name}"
+            save_file = f"./data/imgs/augmented/{folder_name}/{aug_img_name}"
             aug_image = cv2.cvtColor(aug_img, cv2.COLOR_RGB2BGR)
             cv2.imwrite(save_file, aug_image)
     
