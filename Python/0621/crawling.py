@@ -74,4 +74,4 @@ def crawling(query, counts):
     print(f"{query} 다운로드 완료")
     driver.close()
 
-crawling("사과", 5)
+crawling("mango", 100)
