@@ -186,7 +186,7 @@ if __name__ == "__main__" :
     # Original to Resized (255,255) 
     input_path = './imgs/original/'
     cr.make_dirs(input_path)
-    img_path_list = glob.glob(os.path.join(input_path, "*", "*.png"))
+    img_path_list = glob.glob(os.path.join(input_path, "*", "*.jpg"))
     for img_path in tqdm(img_path_list):
         dir, file = os.path.split(img_path)
         folder_name = dir.rsplit('\\')[1]
