@@ -17,4 +17,5 @@
 - 5/15 - 5/18 Certificate - AI-900, DP-900
 - 5/19 - 5/23 Statistical Data Analysis
 - 5/24 - 5/25 Career Service & Town Hall Meeting 2
-- 5/26 Python - Statistics & Image Handling
+- 5/26 - Python - Statistics, Image Handling, Time Series Data
+- 5/30 - Python - Time Series Data, EDA, Visualization, Interpolation
