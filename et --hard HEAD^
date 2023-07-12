@@ -1,0 +1,304 @@
+[33mcommit dce34976d100dca61656f43b35eebe47694dd2cb[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Wed Jul 12 16:24:49 2023 +0900
+
+    modified
+
+[33mcommit c77d59ef4f7a4b7c632ead48ac81fcf404aeef6c[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Wed Jul 12 16:22:48 2023 +0900
+
+    0712
+
+[33mcommit 5f99eb3115f30c34401bfc2538103fefe264a93f[m
+Merge: 179ddc4 5dd9d6d
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Wed Jul 12 16:09:09 2023 +0900
+
+    Merge branch 'main' of https://github.com/Jayh625/MS-AI-School
+
+[33mcommit 179ddc4984ac48595119408212996de7936f2760[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Wed Jul 12 16:08:57 2023 +0900
+
+    Python/0712 PySide6
+
+[33mcommit 5dd9d6dae38d4d12ec72c1c13e5c89a3421ab52a[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Jayh625 <104330432+Jayh625@users.noreply.github.com>
+Date:   Wed Jul 12 10:24:55 2023 +0900
+
+    Update README.md
+
+[33mcommit 9695dd59af7808d0f147bcef9dd5b5e2536d9fda[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Tue Jul 11 17:43:25 2023 +0900
+
+    Python/0711 PySide6 QtWidgets
+
+[33mcommit 1241774ec5fd92a83266e41378f43b8c7d725fa6[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Mon Jul 10 17:54:26 2023 +0900
+
+    Ensemble, PySide6
+
+[33mcommit 8c27ffc3b812d7c6640c82886a615a874e0b85fa[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Fri Jul 7 18:03:09 2023 +0900
+
+    Python/0707 Ensemble
+
+[33mcommit 0f94502f508d23e004fb0919ab45e21271ff2400[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Fri Jul 7 15:22:00 2023 +0900
+
+    Python/0707 Flask
+
+[33mcommit 821935963a90dfe51aa75ba99f605bb084af125f[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Fri Jul 7 13:35:38 2023 +0900
+
+    Python/0707 Precision, Recall, IOU, Coefficient, Resnet50
+
+[33mcommit 8bb8dbb76415b4ef3df95023a3266d5852e64410[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Fri Jul 7 08:56:15 2023 +0900
+
+    0707
+
+[33mcommit 84e9e0a38e460806544a57b86618498099c8fc4e[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Thu Jul 6 17:57:33 2023 +0900
+
+    Python/0706 Dropout, Smoothing, Mixup
+
+[33mcommit c73d91d4b7d6a29d96829b85547d5115bc9b273f[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Thu Jul 6 17:56:15 2023 +0900
+
+    0706
+
+[33mcommit 89c3aea4823ddc9691385e65c2f4c1660709fe71[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Wed Jul 5 18:10:42 2023 +0900
+
+    Python/0705 Inception
+
+[33mcommit 7d28191c7cef746a3c3d3c0c84c8964f93f5a04a[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Wed Jul 5 17:52:02 2023 +0900
+
+    Python/0705 vgg16, resnet, Inception
+
+[33mcommit 4db4da5ed7cd849a0dab57b9da9afff3e15e6ed2[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Tue Jul 4 16:46:33 2023 +0900
+
+    Python/0704/LeNet-5
+
+[33mcommit 7289df089bd123600a3299f80c0464dd6a23e8ae[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Tue Jul 4 11:31:55 2023 +0900
+
+    Python 0704
+
+[33mcommit 96d0ab29d6b1a69cece882fec902cd58217f8c2e[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Mon Jul 3 21:05:25 2023 +0900
+
+    0703
+
+[33mcommit 7c9c89ef9fd30407c4eafc50022eec2baa94d8fb[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Mon Jul 3 21:05:08 2023 +0900
+
+    Python 0703
+
+[33mcommit 83b960d50074b7046254ca617401501f802cb2f1[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Fri Jun 30 17:48:02 2023 +0900
+
+    Python/0630/
+
+[33mcommit bfd4bc10e1c717becde97c880780c94ea4a9e87d[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Fri Jun 30 15:15:27 2023 +0900
+
+    Python/0630/
+
+[33mcommit 8e66489290bdf983ddfd4fc8489cf49c4cf8f279[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Fri Jun 30 15:15:08 2023 +0900
+
+    gitignore 0630
+
+[33mcommit 062580703216cff3993cc9f61a9766d40deb4144[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Wed Jun 28 18:43:01 2023 +0900
+
+    Python/0627/
+
+[33mcommit 92d681766b68efe54d1072b444529daaa37b0f5d[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Tue Jun 27 11:24:55 2023 +0900
+
+    Python/0627/ Logistic Regression
+
+[33mcommit 4da7ae086e55b19835e81aac17a94602d528f2f8[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Tue Jun 27 11:24:24 2023 +0900
+
+    0627
+
+[33mcommit 318e04ca0b148ae85f5304d109b01dbdb6f22a38[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Tue Jun 27 09:37:26 2023 +0900
+
+    Python/0626/Prac06
+
+[33mcommit 5f242266e3d2e07def6a51e5b13a6d56da8e34a3[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Mon Jun 26 21:19:08 2023 +0900
+
+    Python/Assignment/Assignment14
+
+[33mcommit 1df847ffb83ded736939b3787f953e61e79c0c3f[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Mon Jun 26 21:15:20 2023 +0900
+
+    Python/0626/Assignment14
+
+[33mcommit f6e97ecf911b537b28345926aed35a22aaea46ab[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Mon Jun 26 21:14:52 2023 +0900
+
+    Python/0626/Assignment14
+
+[33mcommit 778097af9da74e8f513698d8e016851df38388ee[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Mon Jun 26 21:05:58 2023 +0900
+
+    Python/0626/
+
+[33mcommit 1cbadb6959ee72ff22bd701a70e215f4874bb1e2[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Fri Jun 23 17:46:18 2023 +0900
+
+    Python 0623
+
+[33mcommit 8b51abdf32143aae6d295d8250dec9effec873a4[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Fri Jun 23 16:43:41 2023 +0900
+
+    Python 0623
+
+[33mcommit cc5c9a9f7d4a44ace9c4adf6837d2849ade649dd[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Fri Jun 23 16:40:39 2023 +0900
+
+    Python 0623
+
+[33mcommit 17bbfa7a07362050ddaad238c09cb6e76e69d8fa[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Fri Jun 23 15:25:27 2023 +0900
+
+    0623 checkpoint deleted
+
+[33mcommit c221f69b47a50cc01e2845a3f2009e184f232677[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Fri Jun 23 15:24:19 2023 +0900
+
+    0623 checkpoint deleted
+
+[33mcommit 1d96adc08f457ef428ff2210784106709affbd92[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Fri Jun 23 11:47:02 2023 +0900
+
+    Pyhton Assignment 0622
+
+[33mcommit 900fb29394cbde84b9f379e87d7ca633649f1310[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Fri Jun 23 11:41:17 2023 +0900
+
+    Python/0622 Custom Dataset
+
+[33mcommit eb27706ca63567b69b2193289886853bed35d69d[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Fri Jun 23 11:39:50 2023 +0900
+
+    Python/0622/ Custom Dataset
+
+[33mcommit 1eb9f68a20206e6417ffad2588d477db14d8db8b[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Thu Jun 22 13:34:58 2023 +0900
+
+    Python 0622
+
+[33mcommit 52e29903b589920feaf656b69f308c6491033f49[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Thu Jun 22 10:42:14 2023 +0900
+
+    Moved to data
+
+[33mcommit f6377712e67c0a1630ab8c08c1d0db7fdcf3b3c2[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Thu Jun 22 10:42:01 2023 +0900
+
+    .gitignore 0622
+
+[33mcommit 550f288276bd9ed2fe64f4fd34fd0a3529fa1846[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Thu Jun 22 10:25:03 2023 +0900
+
+    Python/0621/ Crawling, Video Processing
+
+[33mcommit da39d36b420b338ea5ce20d8278b2af74068b3f4[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Thu Jun 22 10:24:34 2023 +0900
+
+    .gitignore 0622
+
+[33mcommit 32eafc0864943845b1546b9e43a1add3a7f6fb98[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Thu Jun 22 10:23:43 2023 +0900
+
+    Assignment/Assignment13.py 0622
+
+[33mcommit 414c1d59af1e0b6cd976ffbcb3bf5cbb1cfa6369[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Wed Jun 21 15:12:13 2023 +0900
+
+    Python/0621/ Crawling
+
+[33mcommit 038020842a269bcce615f0dc4893f1af1e31da1c[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Wed Jun 21 15:11:33 2023 +0900
+
+    0621 gitignore
+
+[33mcommit 9a9b390894235260b890f20cc4fc8b368aabd150[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Wed Jun 21 10:55:47 2023 +0900
+
+    Python/0621/
+
+[33mcommit 565a6b8d3ae72f90a9547dd18e6ede701a117f74[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Wed Jun 21 10:55:12 2023 +0900
+
+    Python/Assignment/Assignment12 0621
+
+[33mcommit eee2c99947fe84dcae1fb2e9474077826653fb2b[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Wed Jun 21 10:54:39 2023 +0900
+
+    0621
+
+[33mcommit 7c2ba82318933ae61c6158bbb161c49f9ce113e2[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Wed Jun 21 10:40:32 2023 +0900
+
+    0621
+
+[33mcommit a437f3688717642704281ea06f06bfe29c3deab8[m
+Author: Jayh625 <jayho625@gmail.com>
+Date:   Tue Jun 20 20:48:28 2023 +
