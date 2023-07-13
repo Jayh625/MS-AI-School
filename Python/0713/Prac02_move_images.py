@@ -54,10 +54,6 @@ class ImagePreprocessing :
         shutil.rmtree(self.src)
         print("Deleted Folders")
 
-src = "./data/Paintings Image dataset/"
-dst = "./data/Paintings Image"
+src = "./data/Biscuit Wrappers Dataset/"
+dst = "./data/Biscuit Wrappers/"
 file = ImagePreprocessing(src, dst)
-
-
-
-

@@ -4,12 +4,12 @@ import torch.nn as nn
 import torch.optim as optim
 import torchvision
 import torchvision.transforms as transforms
-from torchvision.models import resnet50, ResNet50_Weights
+from torchvision.models import resnet50
 from lion_pytorch import Lion
 from torch.nn import CrossEntropyLoss
 from torch.utils.data import DataLoader
 import matplotlib.pyplot as plt
-from Prac03_custom_dataset import CustomDataset
+from Prac02_custom_dataset import CustomDataset
 import time
 import math
 from tqdm import tqdm
@@ -86,7 +86,7 @@ def train(model, train_loader, val_loader, epochs, device, optimizer, criterion)
 
 def main() :
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = resnet50(weights=ResNet50_Weights.DEFAULT)
+    model = resnet50(pretrained=True)
     num_features = model.fc.in_features
     model.fc = nn.Linear(num_features, 10)
     model.to(device)
@@ -117,7 +117,7 @@ def main() :
     criterion = CrossEntropyLoss().to(device)
     # optimizer = optim.AdamW(model.parameters(), lr=0.001, weight_decay=1e-2)
     optimizer = Lion(model.parameters(), lr=1e-4, weight_decay=1e-2)
-    model, train_losses, val_losses, train_accs, train_accs = train(model, train_loader, val_loader, epochs, device, optimizer, criterion)
+    model, train_losses, val_losses, train_accs, val_accs = train(model, train_loader, val_loader, epochs, device, optimizer, criterion)
 
     # Plot the traning and validation loss and accuracy curves
     os.makedirs("./result", exist_ok=True)
@@ -128,7 +128,7 @@ def main() :
     plt.show()
     
     plt.plot(train_accs, label="Train Accuracy")
-    plt.plot(val_losses, label="Validation Accuracy")
+    plt.plot(val_accs, label="Validation Accuracy")
     plt.legend()
     plt.savefig('./result/Train_Val_Accuracy.png')
     plt.show()

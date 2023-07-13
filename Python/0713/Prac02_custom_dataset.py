@@ -2,7 +2,6 @@ import os
 import glob
 from torch.utils.data import Dataset
 from PIL import Image, ImageFile
-
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 class CustomDataset(Dataset) :
@@ -10,10 +9,10 @@ class CustomDataset(Dataset) :
         # data_dir = ./data_art/train/
         self.data_dir = glob.glob(os.path.join(data_dir, "*", "*.png"))
         self.transform = transform
-        self.label_dict = {"Abstract" : 0 , "Cubist" : 1, "Expressionist" : 2,
-                           "Impressionist" : 3, "Landscape" : 4, "Pop Art":5,
-                           "Portrait" : 6, "Realist" :7, "Still Life" : 8,
-                           "Surrealist" : 9}
+        self.label_dict = {}
+        folders = os.listdir(data_dir)
+        for i, folder in enumerate(folders) :
+            self.label_dict[folder] = i
 
     def __getitem__(self, item):
         image_path = self.data_dir[item]

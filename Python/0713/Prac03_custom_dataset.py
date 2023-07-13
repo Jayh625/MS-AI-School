@@ -7,7 +7,6 @@ ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 class CustomDataset(Dataset) :
     def __init__(self, data_dir, transform=None):
-        # data_dir = ./data_art/train/
         self.data_dir = glob.glob(os.path.join(data_dir, "*", "*.png"))
         self.transform = transform
         self.label_dict = {"Abstract" : 0 , "Cubist" : 1, "Expressionist" : 2,
