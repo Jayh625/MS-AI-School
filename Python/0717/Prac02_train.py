@@ -12,6 +12,7 @@ from torchvision.models import efficientnet_b0, EfficientNet_B0_Weights
 from torchvision.models import efficientnet_v2_s, EfficientNet_V2_S_Weights
 from Prac02_custom_dataset import CustomDataset
 from tqdm import tqdm
+import pandas as pd
 import matplotlib.pyplot as plt
 from lion_pytorch import Lion
 import os 
@@ -88,6 +89,30 @@ def train(model, train_loader, val_loader, epochs, device, optimizer, criterion,
               f"Train Acc : {train_acc:.4f}, "
               f"Val Loss : {val_loss:.4f}, "
               f"Val Acc : {val_acc:.4f}")
+        
+    df = pd.DataFrame({
+        'Train Loss' : train_losses,
+        'Train Accuracy' : train_accs,
+        'Validation Loss' : val_losses,
+        'Validation Accuracy' : val_accs
+    })
+    df.to_csv(os.path.join(result_dir, 'train_val_results.csv'), index=False)
+
+    plt.figure()
+    plt.plot(train_losses, label="Train loss")
+    plt.plot(val_losses, label="Validation loss")
+    plt.xlabel('Epoch')
+    plt.ylabel('Loss')
+    plt.legend()
+    plt.savefig(os.path.join(result_dir,'loss.png'))
+    
+    plt.figure()
+    plt.plot(train_accs, label="Train Accuracy")
+    plt.plot(val_accs, label="Validation Accuracy")
+    plt.xlabel('Epoch')
+    plt.ylabel('Loss')
+    plt.legend()
+    plt.savefig(os.path.join(result_dir,'accuracy.png'))
 
     return model, train_losses, val_losses, train_accs, val_accs
 

@@ -94,7 +94,7 @@ def train(model, train_loader, val_loader, epochs, device, optimizer, criterion,
         'Validation Loss' : val_losses,
         'Validation Accuracy' : val_accs
     })
-    df.to_csv(os.path.join(result_dir, 'train_val_results.csv', index=False))
+    df.to_csv(os.path.join(result_dir, 'train_val_results.csv'), index=False)
 
     plt.figure()
     plt.plot(train_losses, label="Train loss")
