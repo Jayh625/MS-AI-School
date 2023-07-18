@@ -50,3 +50,4 @@
 - 07/13 - Python - Deep Learning(Image Classification)
 - 07/14 - Python - Deep Learning(Image Classification)
 - 07/17 - Python - Deep Learning(Image Classification)
+- 07/18 - Python - Deep Learning(Image Classification)
