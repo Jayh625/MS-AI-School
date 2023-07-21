@@ -43,8 +43,8 @@
 - 07/04 - Python - Deep Learning(LeNet-5)
 - 07/05 - Python - Deep Learning(VGG16, Resnet, Inception Model)
 - 07/06 - Python - Deep Learning(Dropout, Label Smoothing, Mixup, Evaluation Metrics)
-- 07/07 - Python - Deep Learning(Ensemble, Voting), PySide6
-- 07/10 - Python - PySide6
+- 07/07 - Python - Deep Learning
+- 07/10 - Python - Deep Learning(Ensemble, Voting), PySide6
 - 07/11 - Python - PySide6
 - 07/12 - Python - PySide6
 - 07/13 - Python - Deep Learning(Image Classification)
@@ -52,3 +52,5 @@
 - 07/17 - Python - Deep Learning(Image Classification)
 - 07/18 - Python - Deep Learning(Image Classification)
 - 07/19 - Python - Deep Learning(Image Classification)
+- 07/20 - Python - Object Detection
+- 07/21 - Python - Object Detection
