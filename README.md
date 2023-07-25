@@ -54,3 +54,5 @@
 - 07/19 - Python - Deep Learning(Image Classification)
 - 07/20 - Python - Object Detection
 - 07/21 - Python - Object Detection
+- 07/24 - Python - Object Detection(YOLO5)
+- 07/25 - Python - Object Detection(YOLO5 Inference, YOLO8)
