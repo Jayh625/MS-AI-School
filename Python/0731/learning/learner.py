@@ -87,8 +87,8 @@ class SegLearner:
             self.model.eval()
             with torch.no_grad():
                 for val_i, (inputs, labels) in enumerate(tqdm(self.valid_dataloader)):
-                    inputs = inputs.to(self.device)
-                    labels = labels.to(self.device)
+                    inputs = inputs.float().to(self.device)
+                    labels = labels.long().to(self.device)
 
                     outputs = self.model(inputs)
                     outputs = outputs["out"]
