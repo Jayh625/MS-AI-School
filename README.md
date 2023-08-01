@@ -59,3 +59,4 @@
 - 07/26 - 07/27 - Career Service & Town Hall Meeting 4
 - 07/28 - Python - Object Detection(Segmentation Theory)
 - 07/31 - Python - Object Detection(Segmentation)
+- 08/01 - Python - Object Detection(Keypoint RCNN)
