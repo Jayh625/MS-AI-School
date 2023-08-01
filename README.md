@@ -56,3 +56,6 @@
 - 07/21 - Python - Object Detection
 - 07/24 - Python - Object Detection(YOLO5)
 - 07/25 - Python - Object Detection(YOLO5 Inference, YOLO8)
+- 07/26 - 07/27 - Career Service & Town Hall Meeting 4
+- 07/28 - Python - Object Detection(Segmentation Theory)
+- 07/31 - Python - Object Detection(Segmentation)
