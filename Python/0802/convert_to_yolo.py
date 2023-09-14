@@ -36,7 +36,7 @@ class InfraredImageProcessor :
 
                     # xml 이미지 이름 가져오기 
                     image_name = img_meta.attrib['name']
-                    image_name = image_name.replace('.jpg', ".txt")
+                    image_name = image_name.replace('.png', ".txt")
                     
                     # Box Meta
                     box_metas = img_meta.findall('box')
